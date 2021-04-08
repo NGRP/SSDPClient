@@ -37,7 +37,7 @@ public class SSDPDiscovery {
     private var socket: Socket?
 
     /// Delegate for service discovery
-    public var delegate: SSDPDiscoveryDelegate?
+    public weak var delegate: SSDPDiscoveryDelegate?
 
     /// The client is discovering
     public var isDiscovering: Bool {
