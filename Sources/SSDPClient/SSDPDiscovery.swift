@@ -82,7 +82,7 @@ public class SSDPDiscovery {
     private func readResponses(forDuration duration: TimeInterval) {
         let queue = DispatchQueue.global()
 
-        queue.async() { [weak self]
+        queue.async() { [weak self] in
             while self?.isDiscovering {
                 self?.readResponses()
             }
