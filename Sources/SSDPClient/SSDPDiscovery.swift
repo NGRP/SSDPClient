@@ -83,7 +83,7 @@ public class SSDPDiscovery {
         let queue = DispatchQueue.global()
 
         queue.async() { [weak self] in
-            while self?.isDiscovering {
+            while self?.isDiscovering ?? false {
                 self?.readResponses()
             }
         }
